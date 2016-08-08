@@ -32,7 +32,7 @@
  <or>             ::= <semtrex> "|" <semtrex>
  <symbol_literal> ::= ["!"] <symbol>
  <symbol_literal_set> ::= ["!"] "{" <symbol> ["," <symbol>]... "}"
- <value>          ::= <string> | <char> | Int | Fload
+ <value>          ::= <string> | <char> | <int> | <float>
  <value_literal>  ::= <symbol> ["!"] "=" <value>
  <value_literal_set> ::= <symbol> ["!"] "={" <value> ["," <value> ]... "}"
  <any>            ::= "."
@@ -43,6 +43,7 @@
  <symbol>         ::= (<letter> | <digit> | <special>)+
  <char>           ::= "'" <letter> | <digit> | <special> "'"
  <string>         ::= "\"" (<letter> | <digit> | <special>)+ "\""
+ <int>            ::= <digit>+
  <float>          ::= <digit>+ ["." <digit>+ ]
  @endcode
 
